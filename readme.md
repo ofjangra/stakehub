@@ -27,12 +27,17 @@ The assignment is built on following assumptions:
             quantity:50   //30+20
         }
 
+
+
+
+
 Tech stack Used: 
+
         Front-end: 
             React JS, Formik, Yup, Material-UI, Redux toolkit
         
         Backend : 
-            Node JS, Typescript, Express JS, Winston, Mongoose
+            Node JS, Express JS, Winston, Mongoose
 
         Database : MongoDB
 
@@ -41,7 +46,6 @@ Tech stack Used:
 To run this project you need: 
 
     Node JS installed version > 16
-    Typescript installed
 
     run the commands npm install in client and server folders
 
