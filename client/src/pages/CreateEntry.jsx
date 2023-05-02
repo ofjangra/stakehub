@@ -36,6 +36,7 @@ const CreateOrder = () => {
                     return dispatch(createEntry(newEntry))
                 }
                 else {
+                    dispatch(handleLoading(true))
                     dispatch(createEntry(newEntry))
                 }
             }
@@ -62,6 +63,7 @@ const CreateOrder = () => {
                     return dispatch(createEntry(newEntry))
                 }
                 else {
+                    dispatch(handleLoading(true))
                     dispatch(createEntry(newEntry))
                 }
             }

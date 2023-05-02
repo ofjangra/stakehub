@@ -21,6 +21,11 @@ const Nav = () =>{
                             Create Entry
                         </Link>
                     </li>
+                    <li>
+                        <Link to = "/chart" className="link">
+                            Chart
+                        </Link>
+                    </li>
                     
                 </ul>
             </nav>
