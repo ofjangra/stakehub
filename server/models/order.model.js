@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 
 
 const ordersSchema = new mongoose.Schema({
+    order_id: String,
     order_type:{
         type:String,
         required:true
@@ -19,6 +20,7 @@ const ordersSchema = new mongoose.Schema({
 })
 
 const completedOrdersSchema = new mongoose.Schema({
+    order_id: String,
     price:{
         type:Number,
         required:true

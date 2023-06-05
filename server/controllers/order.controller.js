@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 import logger from '../logger/logger.index.js'
+import { generateIDs } from '../models/id_generator.js'
 import { Order, CompletedOrder } from '../models/order.model.js'
 
 export const createOrder = async (req, res) => {
@@ -55,6 +56,7 @@ export const createOrder = async (req, res) => {
                     await Order.deleteOne({ _id: matchedOrder._id }).session(session)
 
                      newCompletedOrder = await CompletedOrder.create([{
+                        order_id:generateIDs(),
                         price: price,
                         quantity: quantity
                     }], { session: session })
@@ -87,6 +89,7 @@ export const createOrder = async (req, res) => {
                     }, { new: true}).session(session)
 
                         newCompletedOrder =  await CompletedOrder.create([{
+                        order_id:generateIDs(),
                         price: price,
                         quantity: matchedOrder.quantity
                     }], {session:session})
@@ -112,6 +115,7 @@ export const createOrder = async (req, res) => {
                     }, { new: true }).session(session)
 
                     newCompletedOrder =  await CompletedOrder.create([{
+                        order_id:generateIDs(),
                         price: price,
                         quantity: quantity
                     }], { session: session })
@@ -134,6 +138,7 @@ export const createOrder = async (req, res) => {
 
         if (!matchedOrder) {
             const newEntry = await Order.create([{
+                order_id:generateIDs(),
                 order_type:order_type,
                 price:price,
                 quantity:quantity

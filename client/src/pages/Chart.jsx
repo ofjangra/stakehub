@@ -4,7 +4,7 @@ import ChartTable from '../components/ChartTable'
 import Preload from '../components/Preload'
 
 const Chart = () =>{
-    const socket = io.connect("https://stakehub.onrender.com")
+    const socket = io.connect("http://localhost:5000")
 
     const [ordersData, setOrdersData] = useState([])
 
