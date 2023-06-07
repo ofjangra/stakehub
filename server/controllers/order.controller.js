@@ -144,6 +144,8 @@ export const createOrder = async (req, res) => {
                 quantity:quantity
             }])
 
+            console.log("logging something");
+
             logger.info(`order created for price: ${price} & qty:${quantity}`)
 
             return res.status(201).json({
